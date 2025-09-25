@@ -4,14 +4,14 @@ using namespace std;
 int sumarRef(int &carga, int w) // Version sumar
 {
 
-    carga += w;
+    carga += w; // Sumatoria para encontrar la carga final
     return carga;
 }
 
 void restarPtr(int *carga, int w) // Version restar
 {
 
-    if (carga != nullptr)
+    if (carga != nullptr) // Verificar que no sea una direccion vacia
     {
         *carga -= w;
     }
@@ -22,22 +22,26 @@ void simularOperacionValor(int carga, int w) // Version simulacion.
     char op;
 
     cout << "Ingrese A, si desea sumar energia" << endl;
-    cout << "Ingrese B, si desea restar energia" << endl;
+    cout << "Ingrese B, si desea restar energia" << endl; // Opciones
     cin >> op;
 
-    if (op == 'A')
+    if (op == 'A') // Si es "A"
     {
         cout << "Ingrese cuanta carga se genero:" << endl;
         cin >> w;
         carga += w;
         cout << "La carga total es: " << carga << endl;
     }
-    if (op == 'B')
+    if (op == 'B') // Resta si es "B"
     {
         cout << "Ingrese cuanta carga se genero:" << endl;
         cin >> w;
         carga -= w;
         cout << "La carga total es: " << carga << endl;
+    }
+    else
+    {
+        cout << "Opcion invalida." << endl; //"Si no es ninguno."
     }
 }
 
