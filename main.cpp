@@ -17,7 +17,7 @@ void restarPtr(int *carga, int w) // Version restar
     }
 }
 
-void simularOperacionValor(int carga, int w) // Version simulacion
+void simularOperacionValor(int carga, int w) // Version simulacion.
 {
     char op;
 
